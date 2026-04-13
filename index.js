@@ -44,13 +44,20 @@ app.use((err, _req, res, _next) => {
 });
 
 // ── MongoDB Atlas ─────────────────────────────────────────────────
-mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => {
-    console.log('[CareCore] MongoDB Atlas connected');
-    const PORT = process.env.PORT || 5000;
-    app.listen(PORT, () => console.log(`[CareCore] Server on :${PORT}`));
-  })
-  .catch(err => { console.error('[CareCore] DB connection error:', err); process.exit(1); });
+let isConnected = false;
+
+const connectDB = async () => {
+  if (isConnected) return;
+
+  try {
+    const db = await mongoose.connect(process.env.MONGODB_URI);
+    isConnected = db.connections[0].readyState;
+    console.log("[CareCore] MongoDB connected");
+  } catch (err) {
+    console.error("MongoDB error:", err);
+  }
+};
+
+connectDB();
 
 module.exports = app; // required for Vercel serverless
