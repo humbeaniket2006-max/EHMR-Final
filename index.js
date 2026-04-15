@@ -31,15 +31,15 @@ app.use(cors({
 app.use(express.json());
 
 // ── Routes ────────────────────────────────────────────────────────
-app.use('/api/auth',         require('./routes/auth'));
-app.use('/api/users',        require('./routes/users'));
-app.use('/api/residents',    require('./routes/residents'));
-app.use('/api/vitals',       require('./routes/vitals'));
-app.use('/api/alerts',       require('./routes/alerts'));
-app.use('/api/emar',         require('./routes/emar'));
-app.use('/api/labs',         require('./routes/labs'));
-app.use('/api/notes',        require('./routes/notes'));
-app.use('/api/careplans',    require('./routes/careplans'));
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/users', require('./routes/users'));
+app.use('/api/residents', require('./routes/residents'));
+app.use('/api/vitals', require('./routes/vitals'));
+app.use('/api/alerts', require('./routes/alerts'));
+app.use('/api/emar', require('./routes/emar'));
+app.use('/api/labs', require('./routes/labs'));
+app.use('/api/notes', require('./routes/notes'));
+app.use('/api/careplans', require('./routes/careplans'));
 app.use('/api/appointments', require('./routes/appointments'));
 
 app.get('/', (_req, res) => res.json({ status: 'CareCore API running' }));
