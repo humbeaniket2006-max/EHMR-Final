@@ -7,7 +7,7 @@
  *
  * Replace with:
  *
- *   injectedJavaScriptBeforeContentLoaded={`window.API_BASE='https://carecore-api.vercel.app';${INJECTED_JS}`}
+ *   injectedJavaScriptBeforeContentLoaded={`window.API_BASE='https://ehmr-final.vercel.app/';${INJECTED_JS}`}
  *
  * TODO: replace the URL with your actual Vercel deployment URL after `vercel deploy`.
  *

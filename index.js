@@ -3,6 +3,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+app.use(cors({
+  origin: 'https://humbeaniket2006-max.github.io',
+  methods: ['POST', 'GET', 'OPTIONS'],
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization'] // Highly recommended for auth routes
+}));
+
 const app = express();
 
 // ── CORS ──────────────────────────────────────────────────────────

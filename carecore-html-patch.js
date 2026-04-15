@@ -14,7 +14,7 @@
 // SECTION 1 — API LAYER (paste at very top of <script>)
 // ═══════════════════════════════════════════════════════════════════
 
-const API_BASE = window.API_BASE || 'https://carecore-api.vercel.app'; // TODO: set real URL
+const API_BASE = window.API_BASE || 'https://ehmr-final.vercel.app'; // TODO: set real URL
 
 function getToken() { return localStorage.getItem('cc_api_token'); }
 
