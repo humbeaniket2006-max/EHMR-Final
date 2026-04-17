@@ -11,7 +11,7 @@ const app = express();
 app.use(cors({
   origin: (origin, cb) => {
     const allowed = [
-      'https://ehmr-frontend.vercel.app/', // TODO: replace with your actual Vercel URL
+      'https://ehmr-frontend-f7aymwmwq-aniket-humbes-projects.vercel.app', // TODO: replace with your actual Vercel URL
       'http://localhost:3000',
       'http://localhost:5000',
     ];
